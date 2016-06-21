@@ -9,6 +9,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="List Goes Here"></TextBlock>
+        <StackPanel>
+            <Button Content="Back" Command="{Binding BackCommand}"></Button>
+            <TextBlock Text="List Goes Here"></TextBlock>
+        </StackPanel>
     </Grid>
 </views:MvxWindowsPage>
