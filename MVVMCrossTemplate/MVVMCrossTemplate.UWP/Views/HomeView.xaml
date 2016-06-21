@@ -9,9 +9,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
-            <Button Content="List" Command="{Binding GoToList}"></Button>
-            <Button Content="Map" Command="{Binding GoToMap}"></Button>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="List" Command="{Binding GoToList}" VerticalAlignment="Center" HorizontalAlignment="Center"></Button>
+            <Button Content="Map" Command="{Binding GoToMap}" VerticalAlignment="Center" HorizontalAlignment="Center"></Button>
         </StackPanel>
         
     </Grid>
