@@ -11,7 +11,7 @@ namespace MVVMCrossTemplate
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<ViewModels.HomeViewModel>();
         }
     }
 }

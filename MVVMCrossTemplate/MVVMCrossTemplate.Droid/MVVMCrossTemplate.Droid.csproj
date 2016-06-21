@@ -88,6 +88,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Views\MapView.cs" />
+    <Compile Include="Views\ListView.cs" />
+    <Compile Include="Views\HomeView.cs" />
     <Compile Include="Views\FirstView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +100,9 @@
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
     <AndroidResource Include="Resources\layout\FirstView.axml" />
+    <AndroidResource Include="Resources\layout\HomeView.axml" />
+    <AndroidResource Include="Resources\layout\MapView.axml" />
+    <AndroidResource Include="Resources\layout\ListView.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
