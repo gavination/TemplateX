@@ -13,7 +13,7 @@ namespace MVVMCrossTemplate.Droid
 
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+            return new MVVMCrossTemplate.App();
         }
 
         protected override IMvxTrace CreateDebugTrace()

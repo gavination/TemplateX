@@ -1,7 +1,8 @@
-using MvvmCross.Core.ViewModels;
+using MVVMCrossTemplate.ViewModels;
 using MvvmCross.Platform.Platform;
 using MvvmCross.WindowsCommon.Platform;
 using Windows.UI.Xaml.Controls;
+using MvvmCross.Core.ViewModels;
 
 namespace MVVMCrossTemplate.WinPhone
 {
@@ -13,7 +14,7 @@ namespace MVVMCrossTemplate.WinPhone
 
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+            return new MVVMCrossTemplate.App();
         }
 
         protected override IMvxTrace CreateDebugTrace()
