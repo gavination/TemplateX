@@ -10,9 +10,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-            <Button Content="Back" Command="{Binding BackCommand}"></Button>
             <TextBlock Text="Map Goes Here"></TextBlock>
-
         </StackPanel>
     </Grid>
 </views:MvxWindowsPage>

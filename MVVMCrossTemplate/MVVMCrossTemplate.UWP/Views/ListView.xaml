@@ -10,7 +10,6 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-            <Button Content="Back" Command="{Binding BackCommand}"></Button>
             <TextBlock Text="List Goes Here"></TextBlock>
         </StackPanel>
     </Grid>
