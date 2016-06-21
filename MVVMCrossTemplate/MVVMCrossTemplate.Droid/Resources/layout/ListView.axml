@@ -4,12 +4,6 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="Back"
-        local:MvxBind="Click BackCommand" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
