@@ -37,6 +37,8 @@ namespace MVVMCrossTemplate.Web
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseStaticFiles();
+
             app.UseMvc();
         }
     }

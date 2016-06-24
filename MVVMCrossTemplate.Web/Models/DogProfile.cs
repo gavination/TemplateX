@@ -14,6 +14,7 @@ namespace MVVMCrossTemplate.Web
         public DogBreed Breed { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
+        public string Credits { get; internal set; }
     }
 
     public enum DogBreed
