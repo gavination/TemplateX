@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MVVMCrossTemplate.Web.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     public class DogsController : Controller
     {
