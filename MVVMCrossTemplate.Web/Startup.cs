@@ -40,7 +40,7 @@ namespace MVVMCrossTemplate.Web
             loggerFactory.AddDebug();
 
 
-            var baseaddress = Configuration["AzureB2C:BaseAddress"];
+            var baseaddress = Configuration["AzureB2C:DirectoryDomain"];
             var policy = Configuration["AzureB2C:PolicyName"];
             var audienceId = Configuration["AzureB2C:AudienceId"];
             app.UseJwtBearerAuthentication(new JwtBearerOptions
