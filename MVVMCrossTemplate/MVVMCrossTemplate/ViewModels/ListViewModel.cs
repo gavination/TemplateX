@@ -22,15 +22,26 @@ namespace MVVMCrossTemplate.ViewModels
             var newList = new List<Dog>();
             for (var i=0; i < 100; i++)
             {
-                var newDog = service.CreateNewDog(i.ToString());
+                var newDog = service.CreateNewDog();
                 newList.Add(newDog);
             }
             Dogs = new ObservableCollection<Dog>(newList);
         }
+        private MvxCommand<Dog> _itemSelectedCommand;
 
+        public ICommand ItemSelectedCommand
+        {
+            get
+            {
+                _itemSelectedCommand = _itemSelectedCommand ?? new MvxCommand<Dog>(DoSelectItem);
+                return _itemSelectedCommand;
+            }
+        }
 
-
-       
+        private void DoSelectItem(Dog dog)
+        {
+            ShowViewModel<DetailViewModel>(dog);
+        }
 
         public ICommand BackCommand
         {
@@ -39,5 +50,7 @@ namespace MVVMCrossTemplate.ViewModels
                 return new MvxCommand(() => Close(this));
             }
         }
+
+        
     }
 }

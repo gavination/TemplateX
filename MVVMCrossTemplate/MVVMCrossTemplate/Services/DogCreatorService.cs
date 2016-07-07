@@ -8,10 +8,10 @@ namespace MVVMCrossTemplate.Services
 {
     public class DogCreatorService :IDogCreatorService
     {
-        public Dog CreateNewDog(string extra = "")
+        public Dog CreateNewDog()
         {
             Dog dog = new Dog();
-            dog.Name = _names[Random(_names.Count)] + extra;
+            dog.Name = _names[Random(_names.Count)];
             dog.Breed = _breeds[Random(_breeds.Count)];
 
             return dog;
