@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MVVMCrossTemplate.Web.Controllers
 {
+    //[Authorize]
     [Route("api/[controller]")]
     public class DogsController : Controller
     {
@@ -17,7 +19,16 @@ namespace MVVMCrossTemplate.Web.Controllers
                     Id = 1,
                     Breed = DogBreed.Husky,
                     Description = "Husky's are a wonderful breed.",
-                    ImageUrl = new PathString("/Images")
+                    ImageUrl = "https://flic.kr/p/5vvjGF",
+                    Credits = "https://flic.kr/p/5vvjGF"
+                },
+                new DogProfile()
+                {
+                    Id = 1,
+                    Breed = DogBreed.Lab,
+                    Description = "Labs are mans best friend.",
+                    ImageUrl = new PathString("/Images/lab.jpg"),
+                    Credits = "https://flic.kr/p/g7MayP"
                 }
             };
 

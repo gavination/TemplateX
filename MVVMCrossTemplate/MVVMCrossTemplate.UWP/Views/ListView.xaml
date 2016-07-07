@@ -9,8 +9,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
-            <TextBlock Text="List Goes Here"></TextBlock>
-        </StackPanel>
+        <ListView ItemsSource="{Binding Dogs}"  ScrollViewer.ZoomMode="Enabled" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"  ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                        <TextBlock Text="{Binding Breed}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </views:MvxWindowsPage>

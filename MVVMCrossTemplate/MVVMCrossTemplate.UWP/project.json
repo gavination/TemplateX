@@ -5,7 +5,8 @@
     "MvvmCross.Binding": "4.1.4",
     "MvvmCross.Core": "4.1.4",
     "MvvmCross.Platform": "4.1.4",
-    "MvvmCross.StarterPack": "4.2.0"
+    "MvvmCross.StarterPack": "4.2.0",
+    "refit": "2.4.1"
   },
   "frameworks": {
     "uap10.0": {}

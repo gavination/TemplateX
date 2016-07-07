@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace MVVMCrossTemplate.Web
+namespace MVVMCrossTemplate.Model
 {
-    /// <summary>
-    /// Dogs instead of Cats. Becuase we are fighting back.
-    /// </summary>
     public class DogProfile
     {
         public int Id { get; set; }
@@ -19,7 +17,7 @@ namespace MVVMCrossTemplate.Web
 
     public enum DogBreed
     {
-        Lab =0,
+        Lab = 0,
         Husky,
         WhipIt
     }
