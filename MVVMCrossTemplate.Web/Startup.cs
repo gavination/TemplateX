@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Protocols;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
 namespace MVVMCrossTemplate.Web
 {
@@ -36,6 +38,22 @@ namespace MVVMCrossTemplate.Web
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+
+            var baseaddress = Configuration["AzureB2C:BaseAddress"];
+            var policy = Configuration["AzureB2C:PolicyName"];
+            var audienceId = Configuration["AzureB2C:AudienceId"];
+            app.UseJwtBearerAuthentication(new JwtBearerOptions
+            {
+                AutomaticAuthenticate = true,
+                AutomaticChallenge = true,
+                Audience = audienceId,
+                ConfigurationManager = new ConfigurationManager<OpenIdConnectConfiguration>(
+                   metadataAddress: $"https://login.microsoftonline.com/{baseaddress}/v2.0/.well-known/openid-configuration?p={policy}",
+                   configRetriever: new OpenIdConnectConfigurationRetriever(),
+                   docRetriever: new HttpDocumentRetriever() { RequireHttps = false })
+            });
+
 
             app.UseStaticFiles();
 
