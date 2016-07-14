@@ -24,7 +24,21 @@ namespace MVVMCrossTemplate.ViewModels
         {
             dogService = RestService.For<IDogApi>("http://localhost:52583/api/");
         }
+        private MvxCommand<Dog> _itemSelectedCommand;
 
+        public ICommand ItemSelectedCommand
+        {
+            get
+            {
+                _itemSelectedCommand = _itemSelectedCommand ?? new MvxCommand<Dog>(DoSelectItem);
+                return _itemSelectedCommand;
+            }
+        }
+
+        private void DoSelectItem(Dog dog)
+        {
+            ShowViewModel<DetailViewModel>(dog);
+        }
         // Check out viewmodel life cycle at https://github.com/MvvmCross/MvvmCross/wiki/View-Model-Lifecycle
         // also how to load async at http://stackoverflow.com/questions/28472306/what-is-the-best-async-loading-viewmodels-strategy-when-using-mvvmcross with answer from cheesebaron himself
         public override async void Start()

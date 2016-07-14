@@ -8,6 +8,6 @@ namespace MVVMCrossTemplate.Services
 {
     public interface IDogCreatorService
     {
-         Dog CreateNewDog(string extra = "");
+         Dog CreateNewDog();
     }
 }

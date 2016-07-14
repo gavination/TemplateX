@@ -14,8 +14,6 @@ namespace MVVMCrossTemplate.Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.MapView);
-
-           
         }
     }
 }
