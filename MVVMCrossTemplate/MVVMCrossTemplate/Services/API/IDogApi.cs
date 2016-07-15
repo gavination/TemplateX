@@ -1,6 +1,5 @@
 ﻿using MVVMCrossTemplate.Model;
 using Refit;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +12,7 @@ namespace MVVMCrossTemplate.Services
     {
         [Get("/dogs")]
         Task<List<DogProfile>> GetDogs();
+        [Get("/dogs/{id}")]
+        Task<DogProfile> GetDog(string id);
     }
 }

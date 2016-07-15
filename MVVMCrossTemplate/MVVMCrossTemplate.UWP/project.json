@@ -1,12 +1,17 @@
 ﻿{
   "dependencies": {
+    "akavache": "4.1.2",
+    "fusillade": "0.6.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
+    "modernhttpclient": "2.4.2",
     "MvvmCross": "4.1.4",
     "MvvmCross.Binding": "4.1.4",
     "MvvmCross.Core": "4.1.4",
     "MvvmCross.Platform": "4.1.4",
     "MvvmCross.StarterPack": "4.2.0",
-    "refit": "2.4.1"
+    "Polly": "4.3.0",
+    "refit": "2.4.1",
+    "Xam.Plugin.Connectivity": "2.2.12"
   },
   "frameworks": {
     "uap10.0": {}

@@ -26,6 +26,7 @@ namespace MVVMCrossTemplate.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::ModernHttpClient.Resource.String.library_name = global::MVVMCrossTemplate.Droid.Resource.String.library_name;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::MVVMCrossTemplate.Droid.Resource.Attribute.MvxBind;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::MVVMCrossTemplate.Droid.Resource.Attribute.MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::MVVMCrossTemplate.Droid.Resource.Attribute.MvxGroupItemTemplate;
@@ -68,6 +69,7 @@ namespace MVVMCrossTemplate.Droid
 			global::MvvmCross.Droid.FullFragging.Resource.Styleable.MvxListView = global::MVVMCrossTemplate.Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Droid.FullFragging.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::MVVMCrossTemplate.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Droid.FullFragging.Resource.Styleable.MvxListView_MvxItemTemplate = global::MVVMCrossTemplate.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::Splat.Resource.String.library_name = global::MVVMCrossTemplate.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -514,8 +516,8 @@ namespace MVVMCrossTemplate.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040020
-			public const int app_name = 2130968608;
+			// aapt resource value: 0x7f040021
+			public const int app_name = 2130968609;
 			
 			// aapt resource value: 0x7f040001
 			public const int auth_google_play_services_client_facebook_display_name = 2130968577;
@@ -610,8 +612,11 @@ namespace MVVMCrossTemplate.Droid
 			// aapt resource value: 0x7f04001e
 			public const int common_signin_button_text_long = 2130968606;
 			
+			// aapt resource value: 0x7f040020
+			public const int hello = 2130968608;
+			
 			// aapt resource value: 0x7f04001f
-			public const int hello = 2130968607;
+			public const int library_name = 2130968607;
 			
 			static String()
 			{
