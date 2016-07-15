@@ -38,13 +38,10 @@
     <Compile Include="Model\DogProfile.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Dog.cs" />
-    <Compile Include="Services\DogCreatorService.cs" />
     <Compile Include="Services\DogService.cs" />
     <Compile Include="Services\Infrastructure\ApiService.cs" />
     <Compile Include="Services\Infrastructure\IApiService.cs" />
     <Compile Include="Services\API\IDogApi.cs" />
-    <Compile Include="Services\IDogCreatorService.cs" />
     <Compile Include="Services\IDogService.cs" />
     <Compile Include="ViewModels\DetailViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />

@@ -8,10 +8,10 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:textSize="40dp"
-        local:MvxBind="Text Name" />
+        local:MvxBind="Text Breed" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:textSize="20dp"
-        local:MvxBind="Text Breed" />
+        local:MvxBind="Text Description" />
 </LinearLayout>

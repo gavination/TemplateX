@@ -6,16 +6,17 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
+using MVVMCrossTemplate.Model;
 using MVVMCrossTemplate.Services.Infrastructure;
 
 namespace MVVMCrossTemplate.ViewModels
 {
     public class ListViewModel : MvxViewModel
     {
-        private ObservableCollection<Dog> _dogs;
+        private ObservableCollection<DogProfile> _dogs;
         private IDogService dogService;
 
-        public ObservableCollection<Dog> Dogs
+        public ObservableCollection<DogProfile> Dogs
         {
             get { return _dogs; }
             set { _dogs = value; RaisePropertyChanged(() => Dogs); }
@@ -26,18 +27,18 @@ namespace MVVMCrossTemplate.ViewModels
         {
             dogService = new DogService(new ApiService<IDogApi>("http://localhost:3000/api/"));
         }
-        private MvxCommand<Dog> _itemSelectedCommand;
+        private MvxCommand<DogProfile> _itemSelectedCommand;
 
         public ICommand ItemSelectedCommand
         {
             get
             {
-                _itemSelectedCommand = _itemSelectedCommand ?? new MvxCommand<Dog>(DoSelectItem);
+                _itemSelectedCommand = _itemSelectedCommand ?? new MvxCommand<DogProfile>(DoSelectItem);
                 return _itemSelectedCommand;
             }
         }
 
-        private void DoSelectItem(Dog dog)
+        private void DoSelectItem(DogProfile dog)
         {
             ShowViewModel<DetailViewModel>(dog);
         }
@@ -48,11 +49,7 @@ namespace MVVMCrossTemplate.ViewModels
         {
             var dogs = await dogService.GetDogs(Priority.UserInitiated);
 
-            Dogs = new ObservableCollection<Dog>(dogs.Select(x => new Dog()
-                                                    {
-                                                        Name = x.Breed.ToString(),
-                                                        Breed = x.Description
-                                                    }).ToList());
+            Dogs = new ObservableCollection<DogProfile>(dogs);
         }
 
 
