@@ -18,7 +18,7 @@ namespace MVVMCrossTemplate.Droid
 
         protected override IMvxTrace CreateDebugTrace()
         {
-            return new DebugTrace();
+            return new MvxDebugTrace();
         }
     }
 }
