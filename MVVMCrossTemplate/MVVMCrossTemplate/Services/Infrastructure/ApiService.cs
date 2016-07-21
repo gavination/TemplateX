@@ -27,6 +27,7 @@
 
 using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Fusillade;
 using ModernHttpClient;
 using Refit;
@@ -35,7 +36,7 @@ namespace MVVMCrossTemplate.Services.Infrastructure
 {
     public class ApiService<T> : IApiService<T>
     {
-        public ApiService(string apiBaseAddress)
+        public ApiService(string apiBaseAddress, Func<Task<string>> getToken)
         {
             if (string.IsNullOrWhiteSpace(apiBaseAddress))
                 throw new ArgumentException("Please pass api address.", nameof(apiBaseAddress));
@@ -52,13 +53,13 @@ namespace MVVMCrossTemplate.Services.Infrastructure
             };
 
             _background = new Lazy<T>(() => createClient(
-                new RateLimitedHttpMessageHandler(new NativeMessageHandler(), Priority.Background)));
+                new RateLimitedHttpMessageHandler(new AuthenticatedHttpClientHandler(getToken), Priority.Background)));
 
             _userInitiated = new Lazy<T>(() => createClient(
-                new RateLimitedHttpMessageHandler(new NativeMessageHandler(), Priority.UserInitiated)));
+                new RateLimitedHttpMessageHandler(new AuthenticatedHttpClientHandler(getToken), Priority.UserInitiated)));
 
             _speculative = new Lazy<T>(() => createClient(
-                new RateLimitedHttpMessageHandler(new NativeMessageHandler(), Priority.Speculative)));
+                new RateLimitedHttpMessageHandler(new AuthenticatedHttpClientHandler(getToken), Priority.Speculative)));
         }
 
         private readonly Lazy<T> _background;

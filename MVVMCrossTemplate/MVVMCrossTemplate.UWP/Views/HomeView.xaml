@@ -12,6 +12,8 @@
         <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
             <Button Content="List" Command="{Binding GoToList}" HorizontalAlignment="Stretch"></Button>
             <Button Content="Map" Command="{Binding GoToMap}" HorizontalAlignment="Stretch"></Button>
+            <Button Content="Sign In" Command="{Binding SignIn}" HorizontalAlignment="Stretch"></Button>
+            
         </StackPanel>
         
     </Grid>

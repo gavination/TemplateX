@@ -17,4 +17,10 @@
         android:textSize="40dp"
         android:text="Map"
         local:MvxBind="Click GoToMap" />
+  <Button
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:textSize="40dp"
+       android:text="login"
+       local:MvxBind="Click SignIn" />
 </LinearLayout>

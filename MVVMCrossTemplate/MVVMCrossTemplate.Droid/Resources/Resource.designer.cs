@@ -26,6 +26,9 @@ namespace MVVMCrossTemplate.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Microsoft.Identity.Client.Resource.Id.agentWebView = global::MVVMCrossTemplate.Droid.Resource.Id.agentWebView;
+			global::Microsoft.Identity.Client.Resource.Layout.WebAuthenticationBroker = global::MVVMCrossTemplate.Droid.Resource.Layout.WebAuthenticationBroker;
+			global::Microsoft.Identity.Client.Resource.String.ApplicationName = global::MVVMCrossTemplate.Droid.Resource.String.ApplicationName;
 			global::ModernHttpClient.Resource.String.library_name = global::MVVMCrossTemplate.Droid.Resource.String.library_name;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::MVVMCrossTemplate.Droid.Resource.Attribute.MvxBind;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::MVVMCrossTemplate.Droid.Resource.Attribute.MvxDropDownItemTemplate;
@@ -411,6 +414,9 @@ namespace MVVMCrossTemplate.Droid
 			// aapt resource value: 0x7f070008
 			public const int adjust_width = 2131165192;
 			
+			// aapt resource value: 0x7f070011
+			public const int agentWebView = 2131165201;
+			
 			// aapt resource value: 0x7f07000c
 			public const int auto = 2131165196;
 			
@@ -503,6 +509,9 @@ namespace MVVMCrossTemplate.Droid
 			// aapt resource value: 0x7f030007
 			public const int SplashScreen = 2130903047;
 			
+			// aapt resource value: 0x7f030008
+			public const int WebAuthenticationBroker = 2130903048;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -516,8 +525,11 @@ namespace MVVMCrossTemplate.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040021
-			public const int app_name = 2130968609;
+			// aapt resource value: 0x7f040020
+			public const int ApplicationName = 2130968608;
+			
+			// aapt resource value: 0x7f040022
+			public const int app_name = 2130968610;
 			
 			// aapt resource value: 0x7f040001
 			public const int auth_google_play_services_client_facebook_display_name = 2130968577;
@@ -612,8 +624,8 @@ namespace MVVMCrossTemplate.Droid
 			// aapt resource value: 0x7f04001e
 			public const int common_signin_button_text_long = 2130968606;
 			
-			// aapt resource value: 0x7f040020
-			public const int hello = 2130968608;
+			// aapt resource value: 0x7f040021
+			public const int hello = 2130968609;
 			
 			// aapt resource value: 0x7f04001f
 			public const int library_name = 2130968607;

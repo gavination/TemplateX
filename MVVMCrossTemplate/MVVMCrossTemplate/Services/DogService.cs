@@ -42,6 +42,7 @@ namespace MVVMCrossTemplate.Services
     {
         private readonly IApiService<IDogApi> _apiService;
 
+
         public DogService(IApiService<IDogApi> apiService)
         {
             _apiService = apiService;
@@ -106,7 +107,7 @@ namespace MVVMCrossTemplate.Services
                             retryCount: 5,
                             sleepDurationProvider: retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
                         )
-                        .ExecuteAsync(async () => await dogsTask);
+                        .ExecuteAsync(async () => await dogsTask.ConfigureAwait(false));
                 }
                 catch (Exception ex)
                 {
@@ -142,7 +143,7 @@ namespace MVVMCrossTemplate.Services
                 dog = await Policy
                     .Handle<Exception>()
                     .RetryAsync(retryCount: 5)
-                    .ExecuteAsync(async () => await getdogTask);
+                    .ExecuteAsync(async () => await getdogTask.ConfigureAwait(false));
             }
 
             return dog;

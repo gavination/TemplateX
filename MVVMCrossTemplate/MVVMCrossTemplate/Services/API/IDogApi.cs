@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace MVVMCrossTemplate.Services
 {
-    [Headers("Accept: application/json")]
+    [Headers("Accept: application/json", "Authorization: Bearer")]
     public interface IDogApi
     {
         [Get("/dogs")]
         Task<List<DogProfile>> GetDogs();
+
         [Get("/dogs/{id}")]
         Task<DogProfile> GetDog(string id);
     }
