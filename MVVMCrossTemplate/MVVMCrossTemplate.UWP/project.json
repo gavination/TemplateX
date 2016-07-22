@@ -4,20 +4,20 @@
       "version": "4.1.2",
       "suppressParent": "none"
     },
-    "microsoft.bcl.build": "1.0.21",
     "fusillade": "0.6.0",
+    "microsoft.bcl.build": "1.0.21",
     "Microsoft.Identity.Client": "1.0.304142221-alpha",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "modernhttpclient": "2.4.2",
     "MvvmCross": "4.2.2",
     "Polly": "4.3.0",
     "Punchclock": "1.2.0",
     "refit": "2.4.1",
     "splat": "1.6.2",
-    "Xam.Plugin.Connectivity": "2.2.12",
     "SQLitePCL.raw_basic": {
       "version": "0.8.5"
-    }
+    },
+    "Xam.Plugin.Connectivity": "2.2.12"
   },
   "frameworks": {
     "uap10.0": {}
